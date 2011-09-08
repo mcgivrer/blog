@@ -1,0 +1,260 @@
+html > * {
+	padding:0px;
+	margin:0px;
+}
+.clear{
+	clear:both;
+}
+.lclear{
+	clear:left;
+}
+/*----- Page -----*/
+.page{
+	margin:0px 20px;
+	padding:10px;
+	font-size:10pt;
+	font-family:Arial, Tahoma, Verdana, Sans Serif;
+}
+/*----- Entete -----*/
+.page header{
+	min-height:70px;
+	border-bottom:1px dotted #ddd;
+	margin-bottom:10px;
+}
+.page header h1 a{
+	text-decoration:none;
+	border-bottom:1px dotted #ddd;
+	color:#000;
+}
+.page header h1 a:hover{
+	color:#ddd;
+}
+
+.page header h1 {
+	display:block;
+	border-bottom:1px solid #000;
+	text-align:left;
+	margin:0px;
+	padding:0px;
+	padding-right:1em;
+}
+.page header h1 span {
+	display:block;
+	float:right;
+	color:#960;
+	font-size:12pt;
+	padding:5px;
+	margin:0px;
+}
+/*----- Menu -----*/
+.page header #menu{
+	display:block;
+	padding:0px;
+	margin:5px 0px;
+}
+.page header #menu .info{
+	float:left;
+	display:block;
+	list-style:none;
+	margin:0px;
+	padding:0px;
+	width:40%;
+}
+.page header #menu .tools{
+	float:right;
+	margin:0px;
+	padding:0px;
+	list-style:none;
+	text-align:right;
+}
+.page header #menu .tools li {
+	display:inline-block;
+	margin:0px;
+	padding:0px;
+}
+.page header #menu .tools li a{
+	display:block;
+	border:1px solid #ddd;
+	min-width:50px;
+	max-width:150px;
+	background-color:#eee;
+	text-decoration:none;
+	color:#333;
+	font-size:10pt;
+	border-radius:0px;
+	text-shadow:#fff 1px 1px 2px,
+		#fff -1px -1px 2px,
+		#fff -1px 1px 2px,
+		#fff 1px -1px 2px;
+}
+.page header #menu .tools li:LAST-CHILD a{
+	border-top-right-radius:8px;
+	border-bottom-right-radius:8px ;
+}
+.page header #menu .tools li:FIRST-CHILD a{
+	border-top-left-radius:8px;
+	border-bottom-left-radius:8px ;
+}
+.page header #menu .tools li a:hover{
+	background-color:#999;
+	color:#fff;
+	text-shadow:#000 2px 2px 4px;
+}
+.icon{
+	padding: 4px 8px;
+	padding-left:24px;
+	background-position:8px 2px;
+	background-repeat: no-repeat;
+}
+.logout {
+	background-image:url('/public/images/icons/padlock-closed.png');
+}
+.login {
+	background-image:url('/public/images/icons/padlock-open.png');
+}
+
+/*----- Pied de page -----*/
+.page footer {
+	border-top:1px solid #000;
+	margin:10px 0px;
+}
+.page footer p {
+	font-size:9pt;
+	text-align:center;
+}
+/*----- Contenu de la page -----*/
+.page-content{
+	min-height:400px;
+}
+.page-content .tools{
+	float:right;
+	display:inline-block;
+	border:1px solid #ddd;
+	background-color:#eee;
+	border-radius:4px;
+	padding:2px;
+	margin-right:10px;
+}
+.page-content .tools div{
+	font-size:7pt;
+	text-align:center;
+}
+.page-content .tools a{
+	display:inline-block;
+	border:1px solid #eee;
+	background-color:#ccc;
+	border-radius:4px;
+	padding:0px 2px;
+	margin:0px 1px;
+	text-decoration:none;
+	font-size:8pt;
+	font-variant: small-caps;
+}
+/*----- Historique -----*/
+.history {
+	float:right;
+	width:200px;
+	margin:0px;
+	padding:0px;
+	/*border:1px solid #f00;*/
+}
+.history ul{
+	display:block;
+	list-style:none;
+	margin:0px;
+	padding:20px;
+}
+.history ul li{
+	margin:0px;
+	padding:0px;
+}
+
+.history ul li a{
+	display:block;
+	width:100%;
+	border-bottom:1px dotted #ddd;
+	padding:2px 10px;
+	color:#000;
+	/*text-shadow:#000 2px 2px 8px;*/
+	text-decoration:none;
+	text-align:left;
+}
+.history ul li:LAST-CHILD a{
+	border-bottom:0px;	
+}
+.history ul li a:hover{
+	background-color:#000;
+	color:#eee;
+	text-shadow:#eee 2px 2px 8px;
+}
+.history h2{
+	margin:0px;
+	padding:0px 10px;
+}
+/*----- Mise en forme des posts -----*/
+.posts{
+	margin-right:210px;
+	/*border:1px solid #f00;*/
+}
+.posts article{
+}
+.posts article a{
+	text-decoration:none;
+	color:#333;
+}
+.posts article a h2{
+	font-size:14pt;
+	margin:0px;
+	padding:0px 10px;
+	orphans: none;
+}
+.posts article h2:before{
+	content:">> ";
+}
+
+.posts article .header{
+	border-radius:4px;
+	background-color:#eee;
+	padding:10px;
+	margin:10px 0px;
+}
+.posts article .content{
+	margin:10px 0px;
+	text-align:justify;
+	-moz-column-count: 2;
+	-moz-column-gap: 1.5em;
+	-moz-column-rule: 1px solid black;
+	-webkit-column-count: 2;
+	-webkit-column-gap: 1.5em;
+	-webkit-column-rule: 1px solid black;
+}
+.posts article .content img{
+	float:left;
+	border:1px solid #ddd;
+	margin:5px 10px 5px 0px;
+	padding:2px;
+}
+.list article .content img{
+	float:none;
+	width:40px;
+	text-align:center;
+}
+.posts article .info{
+	text-align:right;
+	font-size:8pt;
+	border-top:1px dotted #ccc;
+}
+.post article .content{
+	margin:10px 0px;
+	text-align:justify;
+	-moz-column-count: 2;
+	-moz-column-gap: 1.5em;
+	-moz-column-rule: 1px solid black;
+	-webkit-column-count: 2;
+	-webkit-column-gap: 1.5em;
+	-webkit-column-rule: 1px solid black;
+}
+.posts article .content-list{
+	margin:10px 0px;
+	text-align:justify;
+}

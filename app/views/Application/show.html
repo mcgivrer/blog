@@ -1,0 +1,74 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+<section class="history">
+	<h2>&{'main.history.title'}</h2>
+	<ul>
+	#{list items:histoposts, as:'post'}
+	<li id="${post.id}"><a href="@{Application.show(post.id)}">${post.title}</a></li>
+	#{/list}
+	</ul>
+</section>
+<div class="tools"><div>columns:</div><a href="#" id="addcolumn" rel=".post article .content" title="&{'post.show.addcolumn.tooltip'}">+1</a><a href="#" id="initcolumn" rel=".post article .content" title="&{'post.show.initcolumn.tooltip'}">2</a><a href="#" id="removecolumn" rel=".post article .content" title="&{'post.show.removecolumn.tooltip'}">-1</a></div>
+<section class="post">
+	<article id="${showpost.id}">
+			<h2><a href="@{Application.index()}" title="&{'home.show.title.tooltip'}">${showpost.title}</a></h2>
+			#{if showpost.header}
+			<p class="header">${showpost.header}</p>
+			#{/if }
+			<div class="content">${showpost.content.raw()}</div>
+			<div class="info">author: ${showpost.author.username}, created At ${showpost.createdAt}</div>
+	</article>
+</section>
+<div class="tools"><div>columns:</div><a href="#" id="addcolumn" rel=".posts .list" title="&{'post.show.addcolumn.tooltip'}">+1</a><a href="#" id="initcolumn"  rel=".posts .list" title="&{'post.show.initcolumn.tooltip'}">2</a><a href="#" id="removecolumn" rel=".posts .list" title="&{'post.show.removecolumn.tooltip'}">-1</a></div>
+<div class="clear"></div>
+<section class="posts list">
+
+	<div class="list">
+		#{list items:posts, as:'post'}
+		<article id="${post.id}">
+			<h2><a href="@{Application.show(post.id)}" title="&{'home.post.readfullstory.tooltip'}">${post.title}</a></h2>
+			<div class="content-list">
+				${post.content.substring(0,200).raw()} 
+			<a href="@{Application.show(post.id)}" title="&{'home.post.readfullstory.tooltip'}">...</a>
+			</div>
+			<div class="info">author: ${post.author.username}, created At ${post.createdAt}</div>
+		</article>
+		<div class="lclear"></div>
+		#{/list}
+	</div>
+</section>
+<script type="text/javascript">
+ 	$('.tools #addcolumn').click(function(){
+     	var target= $(this).attr('rel');
+     	var column= parseInt($(''+target).css('-moz-column-count'));
+     	if(	$(''+target).css('-moz-column-count')=="" 
+         	&& $(''+target).css('-webkit-column-count')=="" 
+         	&& $(''+target).css('column-count')==""){
+         	column=1;
+     	}
+     	//alert(target +"=> "+column+" columns");
+		if(column<=5){
+     		$(target).css('-moz-column-count',""+eval(column+1));
+     		
+		}
+ 	});
+ 	$('.tools #initcolumn').click(function(){
+     	var target= $(this).attr('rel');
+     	$(''+target).css('-moz-column-count',"2");
+ 	});
+ 	$('.tools #removecolumn').click(function(){
+     	var target= $(this).attr('rel');
+     	
+ 		var column= parseInt($(''+target).css('-moz-column-count'));
+     	if(	$(''+target).css('-moz-column-count')=="" 
+         	&& $(''+target).css('-webkit-column-count')=="" 
+         	&& $(''+target).css('column-count')==""){
+         	column=1;
+     	}
+     	//alert(target +"=> "+column+" columns");
+		if(column>=1){
+     		$(target).css('-moz-column-count',""+eval(column-1));
+		     		
+		}
+	});    	
+</script>

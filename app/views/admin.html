@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>#{get 'title' /}</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/main.css'}">
+        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/crud.css'}" />
+        #{get 'moreStyles' /}
+        <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
+        <script src="@{'/public/javascripts/jquery-1.5.2.min.js'}" type="text/javascript" charset="utf-8"></script>
+        #{get 'moreScripts' /}
+    </head>
+    <body>
+    	<div class="page">
+    		<header>
+				<h1><a href="/">&{ 'main.title' }</a><span>&{'admin.subtitle'}</span></h1>
+				#{menu user:user/}
+    		</header>
+			<div class="page-content">    		
+	        #{doLayout /}
+	        </div>
+	        <footer>
+	        	<p>&{ 'main.copyright' }</p>
+	        </footer>
+    	</div>
+    </body>
+</html>

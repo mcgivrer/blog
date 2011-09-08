@@ -1,0 +1,28 @@
+# You can specialize this file for each language.
+# For example, for French create a messages.fr file
+#
+main.title=Bloooggg !
+
+main.tools.home.label=Home
+main.tools.home.tooltip=Back to welcome page.
+main.tools.logout.label=Log out
+main.tools.logout.tooltip=Log out from this site.
+main.tools.login.label=Login
+main.tools.login.tooltip=Log with your own user account.
+main.tools.users.label=Users
+main.tools.users.tooltip=Manage users
+main.tools.posts.label=Posts
+main.tools.posts.tooltip=Manage posts
+
+main.history.title=Last posts
+
+main.copyright=Copyright (c) 2011 - <a href="mailto:frederic.delorme@web-context.com">Frédéric Delorme</a>
+
+admin.subtitle=~ Administration ~
+admin.items.users.label=Users
+admin.items.users.title=Manage user's list
+admin.items.posts.label=Posts
+admin.items.posts.title=Manage post's list
+
+
+home.title.size.max.exceed=Maximum size for title can't exceed 255 characters

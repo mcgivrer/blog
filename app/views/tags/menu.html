@@ -1,0 +1,19 @@
+<div id="menu">
+	<ul class="info">
+	#{if _user}
+		<li>Welcome ${_user.username}</li>
+	#{/if}
+	</ul>
+	<ul class="tools">
+		<li><a class="icon adm-home" href="@{Application.index()}" title="&{'main.tools.home.tooltip'}">&{'main.tools.home.label'}</a></li>
+	#{if !_user}
+		<li><a class="icon login" href="@{Secure.login()}" title="&{'main.tools.login.tooltip'}">&{'main.tools.login.label'}</a></li>
+	#{/if}
+	#{if _user}
+		<li><a class="icon adm-users" href="@{administration.Users.list()}" title="&{'main.tools.users.tooltip'}">&{'main.tools.users.label'}</a></li>
+		<li><a class="icon adm-posts" href="@{administration.Posts.list()}" title="&{'main.tools.posts.tooltip'}">&{'main.tools.posts.label'}</a></li>
+		<li><a class="icon logout" href="@{Secure.logout()}" title="&{'main.tools.logout.tooltip'}">&{'main.tools.logout.label'}</a></li>
+	#{/if}
+	</ul>
+	<div class="clear"></div>
+</div>
