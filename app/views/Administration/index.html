@@ -1,10 +1,10 @@
 #{extends 'admin.html' /} #{set title:'Administration' /}
 
-<ul>
-	<li><a href="@{administration.Users.list()}"
+<ul class="toolbar">
+	<li><a class="button adm-users" href="@{administration.Users.list()}"
 		title="&{'admin.items.users.title'}">&{'admin.items.users.label'}</a>
 	</li>
-	<li><a href="@{administration.Posts.list()}"
+	<li><a class="button adm-posts" href="@{administration.Posts.list()}"
 		title="&{'admin.items.posts.title'}">&{'admin.items.posts.label'}</a>
 	</li>
 </ul>

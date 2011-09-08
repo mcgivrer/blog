@@ -5,6 +5,8 @@ main.title=Bloooggg !
 
 main.tools.home.label=Home
 main.tools.home.tooltip=Back to welcome page.
+main.tools.admin.label=Administration
+main.tools.admin.tooltip=Move to admin zone.
 main.tools.logout.label=Log out
 main.tools.logout.tooltip=Log out from this site.
 main.tools.login.label=Login

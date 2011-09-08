@@ -40,23 +40,23 @@ public class User extends Model {
 	}
 	
 	@Required
-	@Max(value=30, message="Username must contains at max 30 characters.")
-	@Min(value=6, message="Username must contains at minima 6 charcaters.")
+//	@Max(value=30, message="Username must contains at max 30 characters.")
+//	@Min(value=6, message="Username must contains at minima 6 charcaters.")
 	public String username;
 	
 	@Required
-	@Max(value=20, message="Password must contains at max 20 characters.")
-	@Min(value=4, message="Password must contains at minima 4 charcaters.")
+//	@Max(value=20, message="Password must contains at max 20 characters.")
+//	@Min(value=4, message="Password must contains at minima 4 charcaters.")
 	public String password;
 	
-	@Max(value=60, message="Firstname must contains at max 60 characters.")
+//	@Max(value=60, message="Firstname must contains at max 60 characters.")
 	public String firstname;
 	
-	@Max(value=60, message="Lastname must contains at max 60 characters.")
+//	@Max(value=60, message="Lastname must contains at max 60 characters.")
 	public String lastname;
 	
 	@Required
-	@Email(message="this field must respect email format.")
+//	@Email(message="this field must respect email format.")
 	public String email;
 	
 	@Required

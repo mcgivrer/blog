@@ -4,14 +4,38 @@ User(McGivrer):
   firstname:  Frédéric
   lastname:   Delorme
   email:      frederic.delorme@web-context.com
-  profile:    ADMINISTRATOR
+  profile:    MODERATOR
   
+User(admin):
+  username:   Administrator
+  password:   admin
+  firstname:  Adm
+  lastname:   inistrator
+  email:      admin@web-context.com
+  profile:    ADMINISTRATOR
+
+User(moder):
+  username:   Moderator
+  password:   moderator
+  firstname:  Mod
+  lastname:   erator
+  email:      moderator@web-context.com
+  profile:    MODERATOR
+  
+User(simple):
+  username:   SimpleUser
+  password:   simple
+  firstname:  Sim
+  lastname:   pleuser
+  email:      simple@web-context.com
+  profile:    USER
+
 Post(post1):
   title:     My First post
   header:    This a first post for the blog demo application
   content:   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras porta, erat et molestie pharetra, ligula mi tincidunt mi, et semper nibh magna vitae leo. Sed blandit tincidunt ullamcorper. Maecenas aliquam ante at augue suscipit tincidunt iaculis velit rhoncus. Integer ullamcorper, arcu vel auctor pellentesque, massa leo egestas enim, eu ornare ipsum purus at augue. Vivamus viverra tellus sed arcu ultrices quis rhoncus quam dapibus. Vestibulum non laoreet neque. Quisque id blandit est. Morbi adipiscing risus id turpis scelerisque facilisis. Mauris ut arcu sed tortor sollicitudin mattis sit amet eu enim. Sed auctor tellus sed lectus bibendum porttitor. Aenean odio ligula, rutrum id molestie eu, tristique id dolor. Vestibulum sit amet dolor ipsum, quis commodo eros. Ut aliquet venenatis augue, eu vestibulum arcu pharetra sit amet. Nunc justo risus, aliquet et egestas sit amet, vestibulum ut nisl. Ut scelerisque eleifend lectus, in rutrum felis commodo egestas. In id est ac est tempus malesuada at nec dolor. 
   author:    McGivrer
-  createdAt: 2011-04-15
+  createdAt: 2011-04-15 20:00
 
 Post(post2):
   title:     Second post

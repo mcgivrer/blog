@@ -10,8 +10,14 @@
 		<li><a class="icon login" href="@{Secure.login()}" title="&{'main.tools.login.tooltip'}">&{'main.tools.login.label'}</a></li>
 	#{/if}
 	#{if _user}
-		<li><a class="icon adm-users" href="@{administration.Users.list()}" title="&{'main.tools.users.tooltip'}">&{'main.tools.users.label'}</a></li>
-		<li><a class="icon adm-posts" href="@{administration.Posts.list()}" title="&{'main.tools.posts.tooltip'}">&{'main.tools.posts.label'}</a></li>
+		#{if controllers.Secured.check("ADMINISTRATOR")}
+			<li><a class="icon adm-users" href="@{Admin.index()}" title="&{'main.tools.admin.tooltip'}">&{'main.tools.admin.label'}</a></li>
+			<li><a class="icon adm-users" href="@{administration.Users.list()}" title="&{'main.tools.users.tooltip'}">&{'main.tools.users.label'}</a></li>
+		#{/if}
+		#{if controllers.Secured.check("ADMINISTRATOR,MODERATOR")}
+			<li><a class="icon adm-posts" href="@{administration.Posts.list()}" title="&{'main.tools.posts.tooltip'}">&{'main.tools.posts.label'}</a></li>
+		#{/if}
+		
 		<li><a class="icon logout" href="@{Secure.logout()}" title="&{'main.tools.logout.tooltip'}">&{'main.tools.logout.label'}</a></li>
 	#{/if}
 	</ul>

@@ -9,10 +9,19 @@ import models.*;
 
 public class Application extends Controller {
 
+	
+	
 	static private int propNbHistoryLines = Integer.parseInt(Play.configuration.getProperty("posts.histo.max.display.by.page","10"));
 	static private int propNbposts = Integer.parseInt(Play.configuration.getProperty("posts.home.max.display.by.page","4"));
 	
-
+	
+    @Before
+    static void setConnectedUser() {
+        if(Secured.isConnected()) {
+            User user = User.find("byEmail", Secured.connected()).first();
+            renderArgs.put("user", user);
+        }
+    }
 	
 	/**
 	 * Home page
