@@ -21,14 +21,16 @@ import play.db.jpa.Model;
 public class Post extends Model {
 	
 	@Required
-	@MaxSize(value=255,message="home.title.size.max.exceed")
+	@MaxSize(value=255,message="error.post.title.size.max.exceed")
 	public String title;
 	
 	@Required(message="post.header.required")
+	@MaxSize(value=1000, message="error.post.header.size.max.exceed")
 	public String header;
 	
 	@Required(message="post.title.required")
 	@Lob
+	@MaxSize(value=20000, message="error.post.content.size.max.exceed")
 	public String content;
 	
 	@Required

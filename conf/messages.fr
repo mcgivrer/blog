@@ -1,0 +1,29 @@
+# You can specialize this file for each language.
+# For example, for French create a messages.fr file
+#
+main.title=Bloooggg !
+
+main.tools.home.label=Accueil
+main.tools.home.tooltip=Retour à la page d'accueil
+main.tools.admin.label=Administration
+main.tools.admin.tooltip=Accéder à la zone d'administration
+main.tools.logout.label=Deconnecter
+main.tools.logout.tooltip=Se déconnecter du site.
+main.tools.login.label=Connecter
+main.tools.login.tooltip=Se connecter avec son compte utilisateur
+main.tools.users.label=Utilisateurs
+main.tools.users.tooltip=Gestion des utilisateurs
+main.tools.posts.label=Articles
+main.tools.posts.tooltip=Gestion des articles
+
+main.history.title=Derniers articles
+
+main.copyright=Copyright (c) 2011 - <a href="mailto:frederic.delorme@web-context.com">Frédéric Delorme</a>
+
+admin.subtitle=~ Administration ~
+admin.items.users.label=Utilisateurs
+admin.items.users.title=Gestion des utilisateurs
+admin.items.posts.label=Articles
+admin.items.posts.title=Gestion des articles
+
+home.title.size.max.exceed=Le nombre maximum de caractères dans le titre est 255.
