@@ -26,5 +26,5 @@ admin.items.users.title=Manage user's list
 admin.items.posts.label=Posts
 admin.items.posts.title=Manage post's list
 
-
+home.post.author.label=Created by <em><a href="%s" title="Send a mail to %s">%s</a></em>, on %s
 home.title.size.max.exceed=Maximum size for title can't exceed 255 characters

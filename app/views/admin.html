@@ -18,11 +18,24 @@
 				#{menu user:user/}
     		</header>
 			<div class="page-content">
-	        #{doLayout /}
+				<div class="bloc admin-content">
+					#{doLayout /}
+					<div class="help">
+						<ul>
+							<li class="help-users" style="display:none;"><h3>&{'admin.help.users.title'}</h3>&{'admin.help.users.text'}</li>
+							<li class="help-posts" style="display:none;"><h3>&{'admin.help.posts.title'}</h3>&{'admin.help.posts.text'}</li>
+						</ul>
+					</div>
+				</div>	        
 	        </div>
 	        <footer>
 	        	<p>&{ 'main.copyright' }</p>
 	        </footer>
     	</div>
+    	<script type="text/javascript">
+    		$('.help ul li').each(function(item){
+    			//alert($(item).attr('class'));
+    		})
+    	</script>
     </body>
 </html>

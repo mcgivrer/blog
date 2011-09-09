@@ -18,7 +18,7 @@
 		${post.content.raw()} 
 		<a href="@{Application.show(post.id)}" title="&{'home.post.readfullstory.tooltip'}">...</a>
 		</div>
-		<div class="info">author: ${post.author.username}, created At ${post.createdAt.format('dd/MM/yyyy hh:mm')}</div>
+		<div class="info">&{'home.post.author.label', "mailto:"+post.author.email, post.author.firstname+" "+post.author.lastname, post.author.username, post.createdAt.format('dd/MM/yyyy hh:mm')}</div>
 	</article>
 	#{/list}
 </section>

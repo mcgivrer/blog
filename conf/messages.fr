@@ -26,4 +26,5 @@ admin.items.users.title=Gestion des utilisateurs
 admin.items.posts.label=Articles
 admin.items.posts.title=Gestion des articles
 
+home.post.author.label=Créé par <em><a href="%s" title="Envoyer un mail à %s">%s</a></em>, le %s
 home.title.size.max.exceed=Le nombre maximum de caractères dans le titre est 255.

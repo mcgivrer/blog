@@ -20,7 +20,11 @@ html > * {
 	min-height:70px;
 	border-bottom:1px dotted #ddd;
 	margin-bottom:10px;
+	background-image:url('../images/icons/128x128/kbugbuster.png');
+	background-repeat:no-repeat;
+	background-position: center right;
 }
+
 .page header h1 a{
 	text-decoration:none;
 	border-bottom:1px dotted #ddd;
