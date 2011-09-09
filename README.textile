@@ -1,0 +1,6 @@
+h1. Bloooggg !
+
+p. Bloooggg is another blog engine, and exists just as a proof of concept about 
+capabilities offered by the fabulous !Playframework:http://www.playframework.org/!.
+
+McG.
