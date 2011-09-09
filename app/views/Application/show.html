@@ -41,6 +41,9 @@
  	$('.tools #addcolumn').click(function(){
      	var target= $(this).attr('rel');
      	var column= parseInt($(''+target).css('-moz-column-count'));
+     	if(column==0){
+     		column= parseInt($(''+target).css('-webkit-column-count'));
+     	}
      	if(	$(''+target).css('-moz-column-count')=="" 
          	&& $(''+target).css('-webkit-column-count')=="" 
          	&& $(''+target).css('column-count')==""){
@@ -49,6 +52,7 @@
      	//alert(target +"=> "+column+" columns");
 		if(column<=5){
      		$(target).css('-moz-column-count',""+eval(column+1));
+         	$(''+target).css('-webkit-column-count',""+eval(column+1)); 
      		
 		}
  	});
@@ -66,7 +70,7 @@
          	column=1;
      	}
      	//alert(target +"=> "+column+" columns");
-		if(column>=1){
+		if(column>=2){
      		$(target).css('-moz-column-count',""+eval(column-1));
 		     		
 		}
